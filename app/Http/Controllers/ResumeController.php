@@ -110,8 +110,9 @@ class ResumeController extends Controller
      */
     public function update(ResumeEditRequest $request, Resume $resume)
     {
-        $data = $request->validated();
         
+        $data = $request->validated();
+                
         if(array_key_exists('picture', $data)){
             if($resume->picture !== null){
                 $pathToFile = public_path("storage/$resume->picture");

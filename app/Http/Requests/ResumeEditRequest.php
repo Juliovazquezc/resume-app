@@ -31,6 +31,7 @@ class ResumeEditRequest extends FormRequest
             'website'=> 'nullable|url',
             'picture'=> 'nullable|image',
             'about' => 'nullable|string',
+            'skills'=> 'nullable|array',
             'title' => Rule::unique('resumes')
                 ->where( fn($query) =>  $query->where('user_id', $resume->user->id) )
                 ->ignore($resume->id)

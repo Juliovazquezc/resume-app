@@ -141,6 +141,10 @@
                     @enderror
                 </div>
 
+                <div class="form-group">
+                    <skills :skills="{{ $resume->skills ?? '[]' }}"/>
+                </div>
+
                 <div class="form-group row mb-0">
                     <div class="col-sm-12">
                         <button type="submit" class="btn btn-primary btn-block">
