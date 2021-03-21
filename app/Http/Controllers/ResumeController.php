@@ -123,6 +123,10 @@ class ResumeController extends Controller
             $data['picture'] = "/storage/$picture";
         }
 
+        if(!array_key_exists('skills', $data)){
+            $resume->skills = null;
+        }
+
         $resume->update($data);
 
         return redirect()->route('resumes.index')->with('alert', [

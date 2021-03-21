@@ -5,7 +5,8 @@
         <div class="card-body">
             <div v-for="(skill, index) in inputs" :key="index" class="d-flex mb-2 p-0">
                 <div class="col-10"> 
-                    <input 
+                    <input
+                    required
                     placeholder="Type your skill"
                     class="form-control" 
                     type="text"
